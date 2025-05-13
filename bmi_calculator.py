@@ -37,6 +37,23 @@ def main() -> None:
             try:
                 weight = float(input("Enter weight (kg): ").strip())
                 height = float(input("Enter weight (kg): ").strip())
+                bmi = calculate_bmi(weight, height)
+                if bmi is not None:
+                    category = interpret_bmi(bmi)
+                    print(f"\nYour BMI: {bmi}")
+                    print(f"Category: {category}")
+            except ValueError:
+                print("Please enter number values")
+        elif choice == "2":
+
+
+            print("Till next time!")
+            break
+        else:
+            print("Wrong choice. Try again.")
+
+if __name__ == "__main__":
+    main()
 
     
     
